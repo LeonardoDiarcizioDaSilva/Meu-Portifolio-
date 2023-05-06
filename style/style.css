@@ -1,0 +1,341 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--fundo__pagina);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Roboto:wght@500+Mono&display=swap');
+
+:root {
+    --cor__letras: #03C988;
+    --fundo: #13005A;
+    --fundo__pagina: #00337C;
+    --fundo__pagina2: #10004b;
+    --borda__botoes: #1C82AD;
+
+    --montserrat: 'Montserrat', sans-serif;
+    --roboto: 'Roboto Mono', monospace;
+}
+
+a {
+    font-family: var(--roboto);
+    text-decoration: none;
+    color: var(--cor__letras);
+}
+h2 {
+    font-family: var(--roboto);
+    display: flex;
+    justify-content: center;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #000;
+}
+p {
+    font-family: var(--montserrat);
+    font-weight: 600;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #000;
+}
+ul {
+    font-family: var(--roboto);
+}
+.navegador {
+    z-index: 1;
+    background-color: var(--fundo);
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 0.5%;
+    border: 2px solid transparent;
+    border-bottom-color: black;
+    border-bottom-width: 100%;
+}
+.navegador__links {
+    font-weight: 600;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#inicio {
+    gap: 5%;
+}
+.texto__inicio {
+    width: 500px;
+}
+ul {
+    padding-left: 7%;
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 5% 0%;
+}
+.botoes__link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid var(--borda__botoes);
+    border-radius: 2rem;
+    padding: 1%;
+    width: 25%;
+    font-weight: 600;
+}
+.botoes__link:hover {
+    background-color: #001e48;
+    border-color: #165d7c;
+}
+.logo {
+    width: 30px;
+}
+.img__inicio {
+    background-image: radial-gradient(circle, var(--fundo__pagina2), var(--fundo__pagina) 63%);
+}
+
+#sobre__mim {
+    gap: 5%;
+    width: 100%;
+    background-color: var(--fundo__pagina2);
+}
+.texto__sobre__mim {
+    width: 500px;
+}
+
+#projetos {
+    flex-direction: column;
+}
+.img__projetos__container {
+    display: flex;
+    justify-content: center;
+    margin-left: 6%;
+}
+.imgs__projetos {
+    width: 400px;
+    height: 300px;
+
+    margin: 5% 5% 0% 0%;
+}
+
+
+#habilidades {
+    gap: 5%;
+    width: 100%;
+    background-color: var(--fundo__pagina2);
+}
+.texto__habilidades {
+    width: 500px;
+}
+.imagens__habilidades__container {
+    gap: 5%;
+    display: flex;
+}
+.imagens__habilidades {
+    width: 155px;
+    height: 190px;
+}
+#html__noColor {
+    background-image: url(../assets/html_sem_cor.png);
+}
+#html__noColor:hover {
+    background-image: url(../assets/html_colorido.png);
+    scale: 1.15;
+}
+#css__noColor {
+    background-image: url(../assets/css_sem_cor.png);
+}
+#css__noColor:hover {
+    background-image: url(../assets/css_colorido.png);
+    scale: 1.15;
+}
+#js__noColor {
+    background-image: url(../assets/javascript_sem_cor.png);
+}
+#js__noColor:hover {
+    background-image: url(../assets/javascript_colorido.png);
+    scale: 1.15;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: var(--cor__letras);
+    background-color: var(--fundo);
+    padding: 1%;
+    font-family: var(--montserrat);
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-top-color: black;
+    border-top-width: 100%;
+}
+
+
+@media (min-width: 1280px) {
+    .imgs__projetos {
+        border: 3px solid black;
+        border-radius: 2rem;
+        width: 400px;
+        height: 300px;
+    }
+    #img1__projetos {
+        background-image: url(../assets/em_breve.png);
+    }
+    #img2__projetos {
+        background-image: url(../assets/em_breve.png);
+    }
+    #img3__projetos {
+        background-image: url(../assets/em_breve.png);
+    }
+    #img1__projetos:hover {
+        scale: 1.15;
+    }
+    #img2__projetos:hover {
+        scale: 1.15;
+    }
+    #img3__projetos:hover {
+        scale: 1.15;
+    }
+}
+@media (max-width: 1023px) {
+    h2 {
+        display: flex;
+        justify-content: center;
+    }
+    section {
+        flex-direction: column;
+        height: 90vh;
+    }
+    #inicio {
+        flex-direction: column-reverse;
+        padding: 0% 0% 15% 0%;
+    }
+    #img__inicio {
+        width: 300px;
+    }
+    #sobre__mim {
+        padding: 10% 0% 15% 0%;
+    }
+    #img__meu__rosto {
+        width: 300px;
+    }
+    .texto__sobre__mim {
+        padding-top: 5%;
+    }
+    #projetos {
+        padding: 10% 0% 15% 0%;
+        height: auto;
+    }
+    .img__projetos__container {
+        flex-wrap: wrap;
+    }
+    #habilidades {
+        padding: 10% 0% 25% 0%;
+        height: auto;
+    }
+    .texto__habilidades {
+        padding-top: 25%;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1279px) {
+    .imgs__projetos {
+        border: 3px solid black;
+        border-radius: 2rem;
+        width: 300px;
+        height: 259px;
+    }
+    #img1__projetos {
+        background-image: url(../assets/em_breve.png);
+    }
+    #img2__projetos {
+        background-image: url(../assets/em_breve.png);
+    }
+    #img3__projetos {
+        background-image: url(../assets/em_breve.png);
+    }
+    #img1__projetos:hover {
+        scale: 1.15;
+    }
+    #img2__projetos:hover {
+        scale: 1.15;
+    }
+    #img3__projetos:hover {
+        scale: 1.15;
+    }
+}
+@media (min-width: 375px) and (max-width: 999px) {
+    section {
+        height: auto;
+    }
+    #inicio {
+        padding: 10% 0% 5% 0%;
+    }
+    .texto__inicio {
+        width: 300px;
+    }
+    .botoes__link {
+        padding: 1%;
+        width: 35%;
+    }
+    #sobre__mim {
+        padding: 17% 0% 5% 0%;
+    }
+    .texto__sobre__mim {
+        width: 300px;
+    }
+    #projetos {
+        height: 100vh;
+    }
+    .imgs__projetos {
+        border: 3px solid black;
+        border-radius: 2rem;
+        width: 300px;
+        height: 259px;
+    }
+    #img1__projetos {
+        background-image: url(../assets/em_breve.png);
+    }
+    #img2__projetos {
+        background-image: url(../assets/em_breve.png);
+    }
+    #img3__projetos {
+        display: none;
+    }
+    #img1__projetos:hover {
+        scale: 1.15;
+    }
+    #img2__projetos:hover {
+        scale: 1.15;
+    }
+    #habilidades {
+        padding: 17% 0% 5% 0%;
+    }
+    .imagens__habilidades__container {
+        flex-direction: column;
+    }
+    .imagens__habilidades {
+        margin-top: 15%;
+        width: 143px;
+    }
+    .texto__habilidades {
+        width: 300px;
+        margin-bottom: 25%;
+    }
+}
